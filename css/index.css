@@ -1,13 +1,4 @@
-/* main.css */
 
-
-/* Importar otros archivos CSS a la pagina principal INDEX*/
-
-
-/*Y para hacer la coneccion se hace coloca*/
-/*   
- <link rel="stylesheet" href="css/index.css">  
-*/
 @import url('nav.css');
 @import url('header.css');
 @import url('content.css');
@@ -19,3 +10,59 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #f5efef;
 }
+
+        html, body {
+            height: 100%;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* El contenedor principal debe ocupar todo el espacio disponible */
+        .content {
+            flex: 1;
+        }
+        
+        /* El pie de página debe ser fijo en la parte inferior */
+        .footer {
+            background-color: #1b1b1b;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            flex-shrink: 0;
+        }
+        
+        .footer .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .footer .logo img {
+            max-width: 50px;
+            margin-right: 10px;
+        }
+        
+        .footer .logo h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+        
+        .footer .about, .footer .social {
+            margin-bottom: 10px;
+        }
+        
+        .footer .social a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        
+        .footer .social a:hover {
+            color: #3049d8;
+        }
+        
+        .footer p {
+            margin: 0;
+        }
