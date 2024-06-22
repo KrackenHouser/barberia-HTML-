@@ -1,0 +1,21 @@
+/* main.css */
+
+
+/* Importar otros archivos CSS a la pagina principal INDEX*/
+
+
+/*Y para hacer la coneccion se hace coloca*/
+/*   
+ <link rel="stylesheet" href="css/index.css">  
+*/
+@import url('nav.css');
+@import url('header.css');
+@import url('content.css');
+@import url('footer.css');
+
+/* Estilos generales del INDEX*/
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5efef;
+}
