@@ -32,3 +32,18 @@
 .footer p {
     margin: 0;
 }
+ /* Agrega los colores representativos a los iconos de redes sociales */
+.footer .social a.facebook:hover,
+.footer .social a.facebook:active {
+color: #1877f2; /* Color de Facebook */
+}
+
+        .footer .social a.instagram:hover,
+        .footer .social a.instagram:active {
+            color: #e4405f; /* Color de Instagram */
+        }
+
+        .footer .social a.whatsapp:hover,
+        .footer .social a.whatsapp:active {
+            color: #25d366; /* Color de WhatsApp */
+        }
