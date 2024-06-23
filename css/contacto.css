@@ -9,31 +9,22 @@ body {
     margin: 0;
     padding: 0;
 }
-
 header, footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 10px 0;
 }
-
 main {
     padding: 20px;
 }
-
 #contact-info, #contact-form, #location, #social-media {
     margin-bottom: 20px;
 }
-
-h2 {
-    color: #333;
-}
-
 form label {
     display: block;
     margin-top: 10px;
 }
-
 form input, form textarea {
     width: 100%;
     padding: 10px;
@@ -42,7 +33,6 @@ form input, form textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-
 form button {
     background-color: #333;
     color: white;
@@ -51,24 +41,19 @@ form button {
     border-radius: 4px;
     cursor: pointer;
 }
-
 form button:hover {
     background-color: #555;
 }
-
 #map {
     width: 100%;
     height: 400px;
     background-color: #e5e5e5;
 }
-
 #social-media img {
     width: 40px;
     margin-right: 10px;
 }
-
 #social-media a {
     display: inline-block;
     margin-top: 10px;
 }
-
