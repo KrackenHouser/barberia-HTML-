@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/tijera.png" heigh="64", widht="64" type="image/x-icon">
+    <title>DAVID'S BARBERSHOP💈✅ </title>
+    <link rel="stylesheet" href="css/index.css"> 
+</head>
+<body>
+    <header>
+        <h1>Contactos</h1>
+    </header>
+    <main>
+        <section id="contact-info">
+            <h2>Información de Contacto</h2>
+            <p>Dirección: Avenida Principal, Colonia San Felipe de Jesús, Santa Ana.</p>
+            <p>Teléfono: <a href="tel:72048125">7204-8125</a></p>
+            <p>Correo electrónico: <a href="mailto:info@davidsbarbershop.com">info@davidsbarbershop.com</a></p>
+            <p>Horario de atención: Lunes a Sábado, 9:00 AM - 7:00 PM</p>
+        </section>
+        
+        <section id="contact-form">
+            <h2>Envíanos un mensaje</h2>
+            <form action="send_message.php" method="POST">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Teléfono:</label>
+                <input type="tel" id="phone" name="phone">
+
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <section id="location">
+            <h2>Ubicación</h2>
+            <div id="map"></div>
+        </section>     
+        
+        <div id="footer"></div>
+        <script>
+            function loadFooter() {
+                fetch('components/footer.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('footer').innerHTML = data;////se Invoca la ETIQUETA FOOTER-PLACEHOLzDER
+                        setCurrentYear(); // Llamar a la función para establecer el año actual
+                    })
+                    .catch(error => console.error('Error cargando el footer:', error));
+            }
+            function setCurrentYear() {
+                const yearSpan = document.getElementById('currentYear');
+                if (yearSpan) {
+                    yearSpan.textContent = new Date().getFullYear();
+                }
+            }
+            loadFooter();
+        </script>
+        <script src="javascript/main.js"></script>
+    </main>
+  
+    <script>
+        // Aquí puedes agregar un script para inicializar el mapa de Google Maps.
+    </script>
+</body>
+</html>
