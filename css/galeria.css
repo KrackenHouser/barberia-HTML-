@@ -2,7 +2,7 @@
     transition: transform 0.3s;
 }
 .card:hover {
-    transform: scale(0.05);
+    transform: scale(1.09);
 }
 .card-img-top {
     height: 200px;
