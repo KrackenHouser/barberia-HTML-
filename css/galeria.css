@@ -16,3 +16,17 @@
         height: 150px;
     }
 }
+
+/* Agregar de espacio a los lados */
+
+#main-container {
+  max-width: 1200px; /* Ajusta este valor según tus necesidades */
+  margin: 0 auto;
+  background-color: white;}
+
+
+@media (max-width: 1200px) {
+  #main-container {
+    width: 95%; /* En pantallas más pequeñas, usa un porcentaje del ancho */
+  }
+}
