@@ -1,49 +1,26 @@
-.footer {
-    background-color: #1b1b1b;
-    color: #fff;
-    padding: 20px 0;
+footer {
+    background-color: #f2f2f2;
+    padding: 20px;
     text-align: center;
 }
-.footer .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
-}
-.footer .logo img {
-    max-width: 50px;
-    margin-right: 10px;
-}
-.footer .logo h2 {
-    margin: 0;
+
+footer h2 {
+    font-family: 'Arial', sans-serif;
     font-size: 24px;
-}
-.footer .about, .footer .social {
     margin-bottom: 10px;
 }
-.footer .social a {
-    color: #fff;
+
+footer p {
+    font-size: 16px;
+    color: #333;
+}
+
+footer div a {
     margin: 0 10px;
     text-decoration: none;
-}
-.footer .social a:hover {
-    color: #3049d8;
-}
-.footer p {
-    margin: 0;
-}
- /* Agrega los colores representativos a los iconos de redes sociales */
-.footer .social a.facebook:hover,
-.footer .social a.facebook:active {
-color: #1877f2; /* Color de Facebook */
+    color: #000;
 }
 
-        .footer .social a.instagram:hover,
-        .footer .social a.instagram:active {
-            color: #e4405f; /* Color de Instagram */
-        }
-
-        .footer .social a.whatsapp:hover,
-        .footer .social a.whatsapp:active {
-            color: #25d366; /* Color de WhatsApp */
-        }
+footer div a:hover {
+    color: #555;
+}
