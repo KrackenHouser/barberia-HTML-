@@ -10,9 +10,18 @@
     <link rel="stylesheet" href="css/index.css"> 
 </head>
 <body>
-    <header>
-        <h1>Contactos</h1>
-    </header>
+    <nav id="nav"></nav>
+    <script>
+    function loadNav() {
+            fetch('components/nav.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('nav').innerHTML = data;
+                })
+                .catch(error => console.error('Error cargando el nav:', error));
+        }
+        loadNav();
+    </script>
     <main>
         <section id="contact-info">
             <h2>Información de Contacto</h2>
