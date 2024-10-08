@@ -24,3 +24,38 @@ footer div a {
 footer div a:hover {
     color: #555;
 }
+
+/* Mantén el estilo original del footer */
+.footer .social a.facebook:hover,
+.footer .social a.facebook:active {
+    color: #1877f2;
+}
+
+.footer .social a.instagram:hover,
+.footer .social a.instagram:active {
+    color: #e4405f;
+}
+
+.footer .social a.whatsapp:hover,
+.footer .social a.whatsapp:active {
+    color: #25d366;
+}
+
+.footer .logo h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.footer .about, .footer .social {
+    margin-bottom: 10px;
+}
+
+    .footer .social a {
+        color: black;
+        margin: 0 10px;
+        text-decoration: none;
+    }
+
+        .footer .social a:hover {
+            color: #3049d8;
+        }
