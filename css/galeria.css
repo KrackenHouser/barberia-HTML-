@@ -1,0 +1,18 @@
+.card {
+    transition: transform 0.3s;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+@media (max-width: 768px) {
+    .col-sm-6 {
+        padding: 0 5px;
+    }
+    .card-img-top {
+        height: 150px;
+    }
+}
