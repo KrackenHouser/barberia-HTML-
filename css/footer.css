@@ -1,46 +1,26 @@
-.footer {
+footer {
     background-color: #f2f2f2;
     padding: 20px;
     text-align: center;
 }
 
-.footer h2 {
+footer h2 {
     font-family: 'Arial', sans-serif;
     font-size: 24px;
     margin-bottom: 10px;
 }
 
-.footer p {
+footer p {
     font-size: 16px;
     color: #333;
 }
 
-.footer .social {
-    margin-bottom: 10px;
-}
-
-.footer .social a {
-    color: black;
+footer div a {
     margin: 0 10px;
     text-decoration: none;
-    transition: color 0.3s ease;
+    color: #000;
 }
 
-.footer .social a.facebook:hover,
-.footer .social a.facebook:active {
-    color: #1877f2; /* Color de Facebook */
-}
-
-.footer .social a.instagram:hover,
-.footer .social a.instagram:active {
-    color: #e4405f; /* Color de Instagram */
-}
-
-.footer .social a.whatsapp:hover,
-.footer .social a.whatsapp:active {
-    color: #25d366; /* Color de WhatsApp */
-}
-
-.footer .social a:hover {
-    color: #3049d8; /* Color al pasar el mouse */
+footer div a:hover {
+    color: #555;
 }
