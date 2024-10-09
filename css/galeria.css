@@ -62,8 +62,8 @@
             }
         }
 /* 1200px era*/
-        @media (max-width: 1900px) {
+        @media (max-width: 1200px) {
             #main-container {
-                width: 70%;
+                width: 50%;
             }
         }
