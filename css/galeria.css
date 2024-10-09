@@ -1,4 +1,4 @@
-        #main-container {
+      #main-container {
             max-width: 1200px;
             margin: 0 auto;
             background-color: white;
@@ -61,9 +61,8 @@
                 width: 100%;
             }
         }
-/* 1200px era*/
         @media (max-width: 1200px) {
             #main-container {
-                width: 50%;
+                width: 95%;
             }
         }
