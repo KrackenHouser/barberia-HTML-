@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
         { nombre: "Fade Moderno", imagenUrl: "https://instagram.fsal2-1.fna.fbcdn.net/v/t51.29350-15/334618131_1660845924329407_5886103237575872943_n.webp?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMDgweDEwODAuc2RyLmYyOTM1MC5kZWZhdWx0X2ltYWdlIn0&_nc_ht=instagram.fsal2-1.fna.fbcdn.net&_nc_cat=107&_nc_ohc=2USNzPaXG80Q7kNvgET41Vp&_nc_gid=8c10c153b479485492ef1014b3f16e5e&edm=ANTKIIoBAAAA&ccb=7-5&oh=00_AYBvF-dKllWD81Ab4MrfRr5u4jwoSPEZWp6EF-8E31zhVg&oe=670CDDEF&_nc_sid=d885a2", descripcion: "Desvanecido con estilo contemporáneo" },
         { nombre: "Pompadour", imagenUrl: "/Images/pompadour.jpg", descripcion: "Estilo clásico con un toque moderno" },
         { nombre: "Corte Clásico", imagenUrl: "/Images/corte-clasico.jpg", descripcion: "Un corte elegante y tradicional" },
-        { nombre: "Fade Moderno", imagenUrl: "https://instagram.fsal2-1.fna.fbcdn.net/v/t51.29350-15/334618131_1660845924329407_5886103237575872943_n.webp?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMDgweDEwODAuc2RyLmYyOTM1MC5kZWZhdWx0X2ltYWdlIn0&_nc_ht=instagram.fsal2-1.fna.fbcdn.net&_nc_cat=107&_nc_ohc=2USNzPaXG80Q7kNvgET41Vp&_nc_gid=8c10c153b479485492ef1014b3f16e5e&edm=ANTKIIoBAAAA&ccb=7-5&oh=00_AYBvF-dKllWD81Ab4MrfRr5u4j", descripcion: ""},
 
     const galeriaContainer = document.getElementById('galeria'); // CORREGIDO
 
