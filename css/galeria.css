@@ -1,13 +1,39 @@
 .card {
     transition: transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
 }
+
 .card:hover {
     transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
 .card-img-top {
     height: 200px;
     object-fit: cover;
+    border-radius: 8px 8px 0 0;
 }
+
+.card-body {
+    padding: 1rem;
+    text-align: center;
+}
+
+h5.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+p.card-text {
+    font-size: 1rem;
+    color: #666;
+}
+
+
+
+
+/*Intacto */
 @media (max-width: 768px) {
     .col-sm-6 {
         padding: 0 5px;
