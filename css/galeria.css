@@ -1,4 +1,15 @@
-      #main-container {
+body {
+    overflow: -moz-scrollbars-none; /* Para Firefox */
+    -ms-overflow-style: none;  /* Para IE y Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+body::-webkit-scrollbar { 
+    display: none; /* Para Chrome, Safari y Opera */
+}
+
+/*"Scrollbar"*/
+#main-container {
             max-width: 1200px;
             margin: 0 auto;
             background-color: white;
