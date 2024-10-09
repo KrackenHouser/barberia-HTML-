@@ -38,6 +38,16 @@
             box-sizing: border-box;
         }
 
+       @media (max-width: 768px) {
+            .col-md-4 {
+                width: 50%;
+            }
+        }
+        @media (max-width: 576px) {
+            .col-md-4 {
+                width: 100%;
+            }
+        }
 /*Intacto */
 @media (max-width: 768px) {
     .col-sm-6 {
