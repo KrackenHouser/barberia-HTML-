@@ -1,4 +1,3 @@
-// Función para cargar un componentes en el Index HTML
 function loadComponent(elementId, filePath) {
     fetch(filePath)
         .then(response => {
@@ -9,20 +8,33 @@ function loadComponent(elementId, filePath) {
         })
         .then(data => {
             document.getElementById(elementId).innerHTML = data;
+            
+            // Si el componente cargado es el nav, añadimos la funcionalidad del navbar móvil
+            if (elementId === 'nav') {
+                setupMobileNav();
+            }
         })
         .catch(error => {
             console.error('Error:', error);
         });
 }
 
-// Cargar los componentes de las otras plantillas que vaya implemntar 
+// Función para configurar la navegación móvil
+function setupMobileNav() {
+    const navbarToggle = document.querySelector('.navbar-toggle');
+    const navbarLinks = document.querySelector('.navbar-links');
+    
+    if (navbarToggle && navbarLinks) {
+        navbarToggle.addEventListener('click', () => {
+            navbarToggle.classList.toggle('active');
+            navbarLinks.classList.toggle('active');
+        });
+    }
+}
+
+// Cargar los componentes de las otras plantillas que vaya implementar 
 document.addEventListener('DOMContentLoaded', function(){
     loadComponent('nav', 'components/nav.html');
     loadComponent('header', 'components/header.html');
     loadComponent('footer', 'components/footer.html');
-
-
-
-
-
 });
