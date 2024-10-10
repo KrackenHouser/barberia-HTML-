@@ -71,7 +71,7 @@ body {
 /* Agregar de espacio a los lados */
 
 #main-container {
-  max-width: 1800px; /* Ajusta este valor según tus necesidades */
+  max-width: 1000px; /* Ajustar este valor segun tus necesidades */
   /* 1200px por defecto */
     margin: 0 auto;
   background-color: white;}
