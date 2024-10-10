@@ -1,4 +1,3 @@
-
 #main-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -70,9 +69,6 @@
         font-size: 0.85rem; /* Reducir tamaño de texto */
     }
 }
-
-
-
 /* Implementacion Insta*/
 
         .preview-overlay {
@@ -82,8 +78,10 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
+            background-color: rgba(0, 0, 0, 0.3); /* Fondo más suave */
+            backdrop-filter: blur(10px); /* Desenfoque del fondo */
             z-index: 1000;
+            transition: all 0.3s ease-in-out;
         }
 
         .preview-container {
