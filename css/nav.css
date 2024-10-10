@@ -3,7 +3,7 @@
             padding: 0;
         }
         .navbar {
-            background-color: #222528;
+            background-color: #2C2F33; /* Dark gray*/
             padding: 10px 20px;
             display: flex;
             justify-content: space-between;
