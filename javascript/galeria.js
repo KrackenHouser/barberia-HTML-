@@ -12,7 +12,6 @@
         { nombre: "Corte Clásico", imagenUrl: "https://scontent-lax3-2.xx.fbcdn.net/v/t39.30808-6/333609444_229358612824247_727969893750845113_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=o47MOEhCN7UQ7kNvgHoFIUS&_nc_ht=scontent-lax3-2.xx&_nc_gid=A5srVXMvUkp5-695Gkl4YwE&oh=00_AYCC7ZjKud4THgAk39tEYtv-nuJmFkTfWz55vEqDWdptiA&oe=670B53DB", descripcion: "Un corte elegante y tradicional" },
         { nombre: "Fade Moderno", imagenUrl: "https://scontent-lax3-1.xx.fbcdn.net/v/t39.30808-6/334763533_892153672036737_12525047881690729_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=TjurC8KQ7AoQ7kNvgGEq0Sp&_nc_ht=scontent-lax3-1.xx&_nc_gid=ATU6dlOvXkENvobReitPudm&oh=00_AYDMRqf8E8wgr0GCuBG3BHtRmmnIBjqJd6sPyAc7MT58HQ&oe=670B3680", descripcion: "Desvanecido con estilo contemporáneo" },
         { nombre: "Pompadour", imagenUrl: "/Images/pompadour.jpg", descripcion: "Estilo clásico con un toque moderno" },
-        { nombre: "Corte Clásico", imagenUrl: "/assets/cilindro.png", instagramUrl: "https://www.instagram.com/p/CpdMfukub0u/?igsh=amxjaHVxOHVsaGRz",descripcion: "Un corte elegante y tradicional" }
     ];
 
     // Find the gallery container
@@ -77,14 +76,5 @@
 
         // Agregar la imagen al array de imágenes
         images.push(corte);
-        galeriaContainer.appendChild(card);
-
-        // Agregar evento de doble clic para abrir la publicación de Instagram
-        const cardImage = card.querySelector('.card-img-top');
-        cardImage.addEventListener('dblclick', () => {
-            window.open(corte.instagramUrl, '_blank');
-
-
-        
     });
 });
