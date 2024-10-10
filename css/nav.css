@@ -29,7 +29,6 @@
         .navbar-toggle {
             display: none;
             color: #ecf0f1;
-            font-size: 1.5em;
             cursor: pointer;
         }
         @media screen and (max-width: 768px) {
