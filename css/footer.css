@@ -1,3 +1,4 @@
+/* Estilos generales del footer */
 footer {
     background-color: #f2f2f2;
     padding: 20px;
@@ -17,9 +18,29 @@ footer p {
 footer div a {
     margin: 0 10px;
     text-decoration: none;
-    color: #000;
+    color: #000; /* Color predeterminado de los enlaces */
 }
 
+/* Hover general para todos los enlaces */
 footer div a:hover {
-    color: #555;
+    color: #3049d8; /* Cambia el color al pasar el mouse por encima */
+}
+
+/* Estilos específicos para las redes sociales */
+/* Facebook */
+footer a.facebook:hover,
+footer a.facebook:active {
+    color: #1877f2; /* Color para Facebook en hover y active */
+}
+
+/* Instagram */
+footer a.instagram:hover,
+footer a.instagram:active {
+    color: #e4405f; /* Color para Instagram en hover y active */
+}
+
+/* WhatsApp */
+footer a.whatsapp:hover,
+footer a.whatsapp:active {
+    color: #25d366; /* Color para WhatsApp en hover y active */
 }
