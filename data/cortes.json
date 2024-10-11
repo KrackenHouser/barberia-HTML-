@@ -11,6 +11,31 @@
             "imagenUrl": "https://cdn.revistafama.com/uploads/media/2021/07/14/kenia-os-se-ha-realizado.jpg",
             "descripcion": "Desvanecido con estilo contemporáneo",
             "link": "https://www.instagram.com/p/CptmglTIhNa/"
+        },
+          {
+            "nombre": "Corte Clásico",
+            "imagenUrl": "https://i.pinimg.com/736x/9d/5c/1c/9d5c1c9d43660bca3fe8c6de5acd2f47.jpg",
+            "descripcion": "Un corte elegante y tradicional",
+            "link": "https://www.instagram.com/p/CrNDl1Du_f3/?utm_source=ig_web_button_share_sheet"
+        },
+        {
+            "nombre": "Fade Moderno",
+            "imagenUrl": "https://cdn.revistafama.com/uploads/media/2021/07/14/kenia-os-se-ha-realizado.jpg",
+            "descripcion": "Desvanecido con estilo contemporáneo",
+            "link": "https://www.instagram.com/p/CptmglTIhNa/"
+        },
+          {
+            "nombre": "Corte Clásico",
+            "imagenUrl": "https://i.pinimg.com/736x/9d/5c/1c/9d5c1c9d43660bca3fe8c6de5acd2f47.jpg",
+            "descripcion": "Un corte elegante y tradicional",
+            "link": "https://www.instagram.com/p/CrNDl1Du_f3/?utm_source=ig_web_button_share_sheet"
+        },
+        {
+            "nombre": "Fade Moderno",
+            "imagenUrl": "https://cdn.revistafama.com/uploads/media/2021/07/14/kenia-os-se-ha-realizado.jpg",
+            "descripcion": "Desvanecido con estilo contemporáneo",
+            "link": "https://www.instagram.com/p/CptmglTIhNa/"
         }
+        
     ]
 }
