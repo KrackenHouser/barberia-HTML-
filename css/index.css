@@ -31,41 +31,15 @@ body {
             text-align: center;
             flex-shrink: 0;
         }
-        
-        .footer .logo {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-        
-        .footer .logo img {
-            max-width: 50px;
-            margin-right: 10px;
-        }
-        
-        .footer .logo h2 {
-            margin: 0;
-            font-size: 24px;
-        }
-        
-        .footer .about, .footer .social {
-            margin-bottom: 10px;
-        }
-        
-        .footer .social a {
-            color: #fff;
-            margin: 0 10px;
-            text-decoration: none;
-        }
-        
-        .footer .social a:hover {
-            color: #3049d8;
-        }
-        
-        .footer p {
-            margin: 0;
-        }
+
+
+
+
+
+
+
+
+
 
 
 /* Agregar de espacio a los lados */
