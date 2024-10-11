@@ -10,6 +10,13 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
  
 }
+html, body {
+    height: 100%;
+    margin: 0;
+}
+footer{
+     position: relative;  /* Asegura que el footer no se superponga con contenido flotante */
+}
 
         html, body {
             height: 100%;
