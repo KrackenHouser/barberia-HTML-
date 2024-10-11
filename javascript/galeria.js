@@ -4,14 +4,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const cortes = [
         { nombre: "Corte Clásico", imagenUrl: "https://duckduckgo.com/?q=Bad+Bunny&t=brave&iar=images&iax=images&ia=images&iai=https%3A%2F%2Fwww.24-horas.mx%2Fwp-content%2Fuploads%2F2022%2F09%2Fbad-bunny-%40badbunny.jpg", descripcion: "Un corte elegante y tradicional" },
         { nombre: "Fade Moderno", imagenUrl: "https://cdn.revistafama.com/uploads/media/2021/07/14/kenia-os-se-ha-realizado.jpg", descripcion: "Desvanecido con estilo contemporáneo" },
-        { nombre: "Pompadour", imagenUrl: "https://i.pinimg.com/736x/9d/5c/1c/9d5c1c9d43660bca3fe8c6de5acd2f47.jpg", descripcion: "Estilo clásico con un toque moderno" }
+        { nombre: "Pompadour", imagenUrl: "https://i.pinimg.com/736x/9d/5c/1c/9d5c1c9d43660bca3fe8c6de5acd2f47.jpg", descripcion: "Estilo clásico con un toque moderno" },
         { nombre: "Corte Clásico", imagenUrl: "https://duckduckgo.com/?q=Bad+Bunny&t=brave&iar=images&iax=images&ia=images&iai=https%3A%2F%2Fwww.24-horas.mx%2Fwp-content%2Fuploads%2F2022%2F09%2Fbad-bunny-%40badbunny.jpg", descripcion: "Un corte elegante y tradicional" },
         { nombre: "Fade Moderno", imagenUrl: "https://cdn.revistafama.com/uploads/media/2021/07/14/kenia-os-se-ha-realizado.jpg", descripcion: "Desvanecido con estilo contemporáneo" },
-        { nombre: "Pompadour", imagenUrl: "https://i.pinimg.com/736x/9d/5c/1c/9d5c1c9d43660bca3fe8c6de5acd2f47.jpg", descripcion: "Estilo clásico con un toque moderno" }
+        { nombre: "Pompadour", imagenUrl: "https://i.pinimg.com/736x/9d/5c/1c/9d5c1c9d43660bca3fe8c6de5acd2f47.jpg", descripcion: "Estilo clásico con un toque moderno" },
         { nombre: "Corte Clásico", imagenUrl: "https://duckduckgo.com/?q=Bad+Bunny&t=brave&iar=images&iax=images&ia=images&iai=https%3A%2F%2Fwww.24-horas.mx%2Fwp-content%2Fuploads%2F2022%2F09%2Fbad-bunny-%40badbunny.jpg", descripcion: "Un corte elegante y tradicional" },
         { nombre: "Fade Moderno", imagenUrl: "https://cdn.revistafama.com/uploads/media/2021/07/14/kenia-os-se-ha-realizado.jpg", descripcion: "Desvanecido con estilo contemporáneo" },
-        { nombre: "Pompadour", imagenUrl: "https://i.pinimg.com/736x/9d/5c/1c/9d5c1c9d43660bca3fe8c6de5acd2f47.jpg", descripcion: "Estilo clásico con un toque moderno" }
-    
+        { nombre: "Pompadour", imagenUrl: "https://i.pinimg.com/736x/9d/5c/1c/9d5c1c9d43660bca3fe8c6de5acd2f47.jpg", descripcion: "Estilo clásico con un toque moderno" },
     ];
 
     cortes.forEach((corte) => {
