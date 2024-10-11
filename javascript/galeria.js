@@ -1,8 +1,8 @@
  document.addEventListener('DOMContentLoaded', function () {
     // Array haircuts
     const cortes = [
-        { nombre: "Corte Clásico", imagenUrl: "/assets/Freshfade.jpg", descripcion: "Un corte elegante y tradicional" },
-        { nombre: "Fade Moderno", imagenUrl: "/assets/Missing2.jpg", descripcion: "Desvanecido con estilo contemporáneo" },
+        { nombre: "Corte Clásico", imagenUrl: "/Assets/Freshfade.jpg", descripcion: "Un corte elegante y tradicional" },
+        { nombre: "Fade Moderno", imagenUrl: "/Assets/Missing2.jpg", descripcion: "Desvanecido con estilo contemporáneo" },
         { nombre: "Pompadour", imagenUrl: "/assets/Kds2.jpg", descripcion: "Estilo clásico con un toque moderno" },
         { nombre: "Corte Clásico", imagenUrl: "https://www.instagram.com/p/CpdMfukub0u/?igsh=amxjaHVxOHVsaGRz", descripcion: "Un corte elegante y tradicional" },
         { nombre: "Corte Clásico", imagenUrl: "/assets/MidFadeYBarba.jpg", descripcion: "Un corte elegante y tradicional" },
