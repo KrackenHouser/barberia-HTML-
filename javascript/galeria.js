@@ -1,17 +1,16 @@
  document.addEventListener('DOMContentLoaded', function () {
     // Array haircuts
     const cortes = [
-        { nombre: "Corte Clásico", imagenUrl: "/Assets/Freshfade.jpg", descripcion: "Un corte elegante y tradicional" },
-        { nombre: "Fade Moderno", imagenUrl: "/Assets/Missing2.jpg", descripcion: "Desvanecido con estilo contemporáneo" },
-        { nombre: "Pompadour", imagenUrl: "/assets/Kds2.jpg", descripcion: "Estilo clásico con un toque moderno" },
-        { nombre: "Corte Clásico", imagenUrl: "https://www.instagram.com/p/CpdMfukub0u/?igsh=amxjaHVxOHVsaGRz", descripcion: "Un corte elegante y tradicional" },
-        { nombre: "Corte Clásico", imagenUrl: "/assets/MidFadeYBarba.jpg", descripcion: "Un corte elegante y tradicional" },
-        { nombre: "Fade Moderno", imagenUrl: "/assets/Kds.jpg", descripcion: "Desvanecido con estilo contemporáneo" },
-        { nombre: "Pompadour", imagenUrl: "/Images/Line.jpg", descripcion: "Estilo clásico con un toque moderno" },
-        { nombre: "Corte Clásico", imagenUrl: "/Images/Moicano.jpg", descripcion: "Un corte elegante y tradicional" },
-        { nombre: "Corte Clásico", imagenUrl: "/assets/Solocorte.jpg", descripcion: "Un corte elegante y tradicional" },
-        { nombre: "Fade Moderno", imagenUrl: "/assets/Missing.jpg", descripcion: "Desvanecido con estilo contemporáneo" },
-        { nombre: "Pompadour", imagenUrl: "/Images/pompadour.jpg", descripcion: "Estilo clásico con un toque moderno" },
+    { nombre: "Corte Clásico", imagenUrl: "/assets/Freshfade.jpg", descripcion: "Un corte elegante y tradicional" },
+    { nombre: "Fade Moderno", imagenUrl: "/assets/Missing2.jpg", descripcion: "Desvanecido con estilo contemporáneo" },
+    { nombre: "Pompadour", imagenUrl: "/assets/Kds2.jpg", descripcion: "Estilo clásico con un toque moderno" },
+    { nombre: "Corte Clásico", imagenUrl: "/assets/MidFadeyBarba.jpg", descripcion: "Un corte elegante y tradicional" },
+    { nombre: "Fade Moderno", imagenUrl: "/assets/Line.jpg", descripcion: "Desvanecido con estilo contemporáneo" },
+    { nombre: "Corte Clásico", imagenUrl: "/assets/Missing2.jpg", descripcion: "Un corte elegante y tradicional" },
+    { nombre: "Pompadour", imagenUrl: "/assets/Solocorte.jpg", descripcion: "Estilo clásico con un toque moderno" },
+    { nombre: "Fade Moderno", imagenUrl: "/assets/Moicano.jpg", descripcion: "Desvanecido con estilo contemporáneo" },
+    { nombre: "Pompadour", imagenUrl: "/assets/pompadour.jpg", descripcion: "Estilo clásico con un toque moderno" }
+
     ];
 
     // Find the gallery container
