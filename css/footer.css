@@ -1,4 +1,11 @@
 /* Estilos generales del footer */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+footer{
+     position: relative;  /* Asegura que el footer no se superponga con contenido flotante */
+}
 footer {
     background-color: #f2f2f2;
     padding: 20px;
