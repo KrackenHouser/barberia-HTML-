@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const galeriaContainer = document.getElementById('galeria');
     
     // Hacer una solicitud para cargar el archivo JSON
-    fetch('cortes.json')
+    fetch('data/cortes.json')
         .then(response => response.json())
         .then(data => {
             const cortes = data.cortes;
