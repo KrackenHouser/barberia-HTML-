@@ -1,3 +1,16 @@
+// Scroll
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+// Verifica si la página fue refrescada
+if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
+    scrollToTop();
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     const galeriaContainer = document.getElementById('galeria');
     
@@ -33,3 +46,4 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .catch(error => console.error('Error al cargar el archivo JSON:', error));
 });
+
