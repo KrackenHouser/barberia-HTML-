@@ -1,3 +1,15 @@
+//Scroll
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+// Verifica si la página fue refrescada
+if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
+    scrollToTop();
+}
+
 function loadComponent(elementId, filePath) {
     fetch(filePath)
         .then(response => {
