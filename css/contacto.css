@@ -76,19 +76,14 @@ form button:hover {
 }
 /*Schedule*/
 #business-hours {
-    margin-bottom: 30px;
-}
-
-#business-hours h2 {
-    margin-bottom: 15px;
-    color: #333;
+    margin-bottom: 20px;
 }
 
 .hours-card {
-    background-color: #f9f9f9;
-    border: 1px solid #e0e0e0;
-    border-radius: 4px;
-    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 20px;
     max-width: 400px;
     margin: 0 auto;
 }
@@ -96,28 +91,15 @@ form button:hover {
 .day-row {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 8px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 10px;
 }
 
-.day-row:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-
-.day {
-    color: #333;
-    font-weight: 500;
-}
-
-.hours {
+.day, .hours {
     color: #666;
 }
 
 @media (max-width: 480px) {
     .hours-card {
-        padding: 10px;
+        padding: 15px;
     }
 }
