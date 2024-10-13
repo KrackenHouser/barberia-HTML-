@@ -31,22 +31,44 @@
             <p>Correo electrónico: <a href="mailto:info@davidsbarbershop.com">info@davidsbarbershop.com</a></p>
             <p>Horario de atención: Lunes a Sábado, 9:00 AM - 7:00 PM</p>
         </section>
-
         <form
   action="https://formspree.io/f/xyzyykyo"
   method="POST"
 >
   <label>
+    Your name:
+    <input type="text" name="name" required>
+  </label>
+  <label>
     Your email:
-    <input type="email" name="email">
+    <input type="email" name="email" required>
+  </label>
+  <label>
+    Your phone number:
+    <input type="tel" name="phone" placeholder="123-456-7890">
+  </label>
+  <label>
+    Service you're interested in:
+    <select name="service">
+      <option value="haircut">Haircut</option>
+      <option value="beard-trim">Beard Trim</option>
+      <option value="shave">Shave</option>
+    </select>
+  </label>
+  <label>
+    Preferred appointment date:
+    <input type="date" name="appointment-date">
   </label>
   <label>
     Your message:
     <textarea name="message"></textarea>
   </label>
-  <!-- your other form fields go here -->
+  <label>
+    <input type="checkbox" name="terms" required> I agree to the terms and conditions
+  </label>
   <button type="submit">Send</button>
 </form>
+
 
         <section id="location">
             <h2>Ubicación</h2>
