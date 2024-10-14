@@ -8,6 +8,7 @@
     <title>DAVID'S BARBERSHOP</title>
     <link rel="stylesheet" href="css/index.css">
     <meta name="description" content="En David's Barbershop ofrecemos cortes de cabello, afeitados y servicios personalizados para que luzcas siempre bien. ¡Reserva tu cita hoy!">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
     <nav id="nav"></nav>
@@ -37,6 +38,72 @@
             loadHeader();
         </script>
 
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+            <img src="..." class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+            <img src="..." class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+            <img src="..." class="d-block w-100" alt="...">
+            </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            </button>
+            </div>
+
+                <h2>Nuestros Servicios</h2>
+    <p>En David's Barbershop, nos especializamos en ofrecer un servicio de primera calidad, asegurándonos de que te sientas renovado y con el estilo que más se adapta a ti.</p>
+
+          <div class="service-list">
+          <div class="service-item">
+            <h3>✂️ Cortes de Cabello</h3>
+            <p>Desde estilos clásicos hasta los más modernos, tenemos el corte perfecto para ti.</p>
+            <ul>
+                <li><strong>Corte Clásico:</strong> Mantén tu estilo tradicional, siempre elegante.</li>
+                <li><strong>Fade Moderno:</strong> Un look fresco y vanguardista.</li>
+                <li><strong>Cortes Personalizados:</strong> Cuéntanos tu idea y la haremos realidad.</li>
+            </ul>
+         </div>
+
+         <div class="service-item">
+            <h3>🪒 Afeitado Clásico</h3>
+            <p>Vive la experiencia de un afeitado con navaja, suave y preciso.</p>
+            <ul>
+                <li><strong>Afeitado con Navaja:</strong> Un afeitado al estilo tradicional, con resultados impecables.</li>
+                <li><strong>Cuidado Post-Afeitado:</strong> Bálsamos y lociones para revitalizar tu piel.</li>
+            </ul>
+        </div>
+        <div class="service-item">
+            <h3>🧔 Cuidado de Barba</h3>
+            <p>Desde un simple recorte hasta un modelado completo, mantén tu barba impecable.</p>
+            <ul>
+                <li><strong>Recorte y Modelado:</strong> Diseño y mantenimiento profesional para tu barba.</li>
+                <li><strong>Tratamientos Especializados:</strong> Aceites y bálsamos de alta calidad.</li>
+            </ul>
+        </div>
+        </div>
+        </section>
+        <hr />
+        <h2>Ubicación</h2>
+        <p>Visítanos en Avenida Principal, Colonia San Felipe de Jesús, Santa Ana.</p>
+        <div id="map"></div>
+        <script src="script.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script> 
+        <h2>Contacto</h2>
+        <p>Teléfono: 7204-8125</p>
+        <a class="btn btn-default" href="Contact.aspx">Ver mas &raquo;</a>
+        </div>
+
+        
         <div class="content">
             <h2>Servicios</h2>
             <p>Ofrecemos los mejores cortes de cabello, afeitados clásicos y modernos, y cuidado de la barba.</p>
@@ -148,7 +215,7 @@
             });
         </script>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="javascript/main.js"></script>
 </body>
 </html>
