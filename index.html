@@ -8,83 +8,85 @@
     <title>DAVID'S BARBERSHOP</title>
     <link rel="stylesheet" href="css/index.css">
     <meta name="description" content="En David's Barbershop ofrecemos cortes de cabello, afeitados y servicios personalizados para que luzcas siempre bien. ¡Reserva tu cita hoy!">
-<styles>
     
-.carrusel {
-    position: relative;
-    max-width: 725px; /* Ajustar este valor según tus necesidades */
-    margin: 0 auto;
-    overflow: hidden;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-}
+    <!-- Corrección de la etiqueta de estilos -->
+    <style>
+        .carrusel {
+            position: relative;
+            max-width: 725px;
+            margin: 0 auto;
+            overflow: hidden;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
 
-.carrusel-container {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
+        .carrusel-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
 
-.carrusel-item {
-    min-width: 100%;
-    box-sizing: border-box;
-}
+        .carrusel-item {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
 
-.tarjeta {
-    display: flex;
-    border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
+        .tarjeta {
+            display: flex;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
 
-.tarjeta-img {
-    width: 40%;
-    object-fit: cover;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-}
+        .tarjeta-img {
+            width: 40%;
+            object-fit: cover;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+        }
 
-.tarjeta-cuerpo {
-    padding: 20px;
-    width: 60%;
-}
+        .tarjeta-cuerpo {
+            padding: 20px;
+            width: 60%;
+        }
 
-.tarjeta-titulo {
-    font-size: 1.25rem;
-    font-weight: bold;
-}
+        .tarjeta-titulo {
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
 
-.tarjeta-texto {
-    font-size: 1rem;
-    color: #6c757d;
-}
+        .tarjeta-texto {
+            font-size: 1rem;
+            color: #6c757d;
+        }
 
-.tarjeta-footer {
-    font-size: 0.875rem;
-    color: #6c757d;
-    margin-top: 10px;
-}
+        .tarjeta-footer {
+            font-size: 0.875rem;
+            color: #6c757d;
+            margin-top: 10px;
+        }
 
-.carrusel-control {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.8);
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 50%;
-}
+        .carrusel-control {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 50%;
+        }
 
-.prev {
-    left: 10px;
-}
+        .prev {
+            left: 10px;
+        }
 
-.next {
-    right: 10px;
-}
-</styles>
+        .next {
+            right: 10px;
+        }
+    </style>
 </head>
 <body>
+    <!-- Carga de navegación -->
     <nav id="nav"></nav>
     <script>
         function loadNav() {
@@ -99,6 +101,7 @@
     </script>
 
     <div id="main-container">
+        <!-- Carga de encabezado -->
         <header id="header"></header>
         <script>
             function loadHeader() {
@@ -111,64 +114,66 @@
             }
             loadHeader();
         </script>
-            <div class="carrusel">
-        <div class="carrusel-container">
-            <div class="carrusel-item active">
-                <div class="tarjeta">
-                    <img src="/api/placeholder/400/600?text=Imagen 1" alt="Imagen 1" class="tarjeta-img">
-                    <div class="tarjeta-cuerpo">
-                        <h5 class="tarjeta-titulo">Título de la Tarjeta 1</h5>
-                        <p class="tarjeta-texto">Este es un texto de ejemplo para la tarjeta 1. Proporciona información adicional sobre el contenido.</p>
-                        <div class="tarjeta-footer">Last updated 5 mins ago</div>
+
+        <!-- Carrusel de tarjetas -->
+        <div class="carrusel">
+            <div class="carrusel-container">
+                <div class="carrusel-item active">
+                    <div class="tarjeta">
+                        <img src="assets/imagen1.jpg" alt="Imagen 1" class="tarjeta-img">
+                        <div class="tarjeta-cuerpo">
+                            <h5 class="tarjeta-titulo">Título de la Tarjeta 1</h5>
+                            <p class="tarjeta-texto">Este es un texto de ejemplo para la tarjeta 1. Proporciona información adicional sobre el contenido.</p>
+                            <div class="tarjeta-footer">Last updated 5 mins ago</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carrusel-item">
+                    <div class="tarjeta">
+                        <img src="assets/imagen2.jpg" alt="Imagen 2" class="tarjeta-img">
+                        <div class="tarjeta-cuerpo">
+                            <h5 class="tarjeta-titulo">Título de la Tarjeta 2</h5>
+                            <p class="tarjeta-texto">Este es un texto de ejemplo para la tarjeta 2.</p>
+                            <div class="tarjeta-footer">Last updated 10 mins ago</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carrusel-item">
+                    <div class="tarjeta">
+                        <img src="assets/imagen3.jpg" alt="Imagen 3" class="tarjeta-img">
+                        <div class="tarjeta-cuerpo">
+                            <h5 class="tarjeta-titulo">Título de la Tarjeta 3</h5>
+                            <p class="tarjeta-texto">Este es un texto de ejemplo para la tarjeta 3.</p>
+                            <div class="tarjeta-footer">Last updated 15 mins ago</div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="carrusel-item">
-                <div class="tarjeta">
-                    <img src="/api/placeholder/400/600?text=Imagen 2" alt="Imagen 2" class="tarjeta-img">
-                    <div class="tarjeta-cuerpo">
-                        <h5 class="tarjeta-titulo">Título de la Tarjeta 2</h5>
-                        <p class="tarjeta-texto">Este es un texto de ejemplo para la tarjeta 2. Es un poco más largo para mostrar cómo se ajusta el contenido.</p>
-                        <div class="tarjeta-footer">Last updated 10 mins ago</div>
-                    </div>
-                </div>
-            </div>
-            <div class="carrusel-item">
-                <div class="tarjeta">
-                    <img src="/api/placeholder/400/600?text=Imagen 3" alt="Imagen 3" class="tarjeta-img">
-                    <div class="tarjeta-cuerpo">
-                        <h5 class="tarjeta-titulo">Título de la Tarjeta 3</h5>
-                        <p class="tarjeta-texto">Este es un texto de ejemplo para la tarjeta 3. Demuestra cómo se puede incluir más información en cada slide.</p>
-                        <div class="tarjeta-footer">Last updated 15 mins ago</div>
-                    </div>
-                </div>
-            </div>
-            <!-- Agrega más tarjetas según sea necesario -->
+            <button class="carrusel-control prev" onclick="cambiarSlide(-1)">&#10094;</button>
+            <button class="carrusel-control next" onclick="cambiarSlide(1)">&#10095;</button>
         </div>
-        <button class="carrusel-control prev" onclick="cambiarSlide(-1)">&#10094;</button>
-        <button class="carrusel-control next" onclick="cambiarSlide(1)">&#10095;</button>
-    </div>
 
+        <!-- Script del carrusel -->
         <script>
-let slideIndex = 0;
+            let slideIndex = 0;
 
-function cambiarSlide(n) {
-    const items = document.querySelectorAll('.carrusel-item');
-    slideIndex += n;
+            function cambiarSlide(n) {
+                const items = document.querySelectorAll('.carrusel-item');
+                slideIndex += n;
 
-    if (slideIndex >= items.length) {
-        slideIndex = 0;
-    }
-    if (slideIndex < 0) {
-        slideIndex = items.length - 1;
-    }
+                if (slideIndex >= items.length) {
+                    slideIndex = 0;
+                }
+                if (slideIndex < 0) {
+                    slideIndex = items.length - 1;
+                }
 
-    const offset = -slideIndex * 100;
-    document.querySelector('.carrusel-container').style.transform = `translateX(${offset}%)`;
-}
-            
+                const offset = -slideIndex * 100;
+                document.querySelector('.carrusel-container').style.transform = `translateX(${offset}%)`;
+            }
         </script>
 
+        <!-- Contenido adicional -->
         <div class="content">
             <h2>Servicios</h2>
             <p>Ofrecemos los mejores cortes de cabello, afeitados clásicos y modernos, y cuidado de la barba.</p>
@@ -189,6 +194,7 @@ function cambiarSlide(n) {
             <div id="reviews"></div>
         </div>
 
+        <!-- Carga del footer -->
         <div id="footer"></div>
         <script>
             function loadFooter() {
@@ -208,7 +214,10 @@ function cambiarSlide(n) {
                 }
             }
             loadFooter();
+        </script>
 
+        <!-- Ajuste de posición del footer -->
+        <script>
             function adjustFooterPosition() {
                 const bodyHeight = document.body.offsetHeight;
                 const windowHeight = window.innerHeight;
@@ -223,12 +232,11 @@ function cambiarSlide(n) {
             }
         </script>
 
-        <!-- Firebase configuration -->
+        <!-- Configuración de Firebase -->
         <script type="module">
-            // Import the functions you need from the SDKs you need
             import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
             import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-database.js";
-            
+
             const firebaseConfig = {
                 apiKey: "AIzaSyAcEOXsxYfMlWfqlUfOKPVGQ6VD4CqpFnw",
                 authDomain: "prueba-1346b.firebaseapp.com",
@@ -239,11 +247,9 @@ function cambiarSlide(n) {
                 measurementId: "G-P1T4EJMV8C"
             };
 
-            // Initialize Firebase
             const app = initializeApp(firebaseConfig);
             const database = getDatabase(app);
 
-            // Guardar una reseña
             function writeReview(userId, name, rating, message) {
                 set(ref(database, 'reviews/' + userId), {
                     username: name,
@@ -252,29 +258,24 @@ function cambiarSlide(n) {
                 });
             }
 
-            // Leer reseñas
             const reviewsRef = ref(database, 'reviews/');
             onValue(reviewsRef, (snapshot) => {
                 const data = snapshot.val();
                 const reviewsDiv = document.getElementById('reviews');
-                reviewsDiv.innerHTML = ''; // Limpiar antes de agregar nuevas reseñas
+                reviewsDiv.innerHTML = '';
                 for (const key in data) {
                     const review = data[key];
                     reviewsDiv.innerHTML += `<div><h4>${review.username} - ${review.rating} estrellas</h4><p>${review.review}</p></div>`;
                 }
             });
 
-            // Manejar el formulario de reseñas
             document.getElementById('reviewForm').addEventListener('submit', function(e) {
                 e.preventDefault();
                 const name = document.getElementById('name').value;
                 const rating = document.getElementById('rating').value;
                 const message = document.getElementById('message').value;
                 
-                // Generar un ID único para el usuario
                 const userId = Date.now();
-
-                // Guardar la reseña en Firebase
                 writeReview(userId, name, rating, message);
                 alert('Reseña enviada correctamente');
             });
@@ -284,5 +285,3 @@ function cambiarSlide(n) {
     <script src="javascript/main.js"></script>
 </body>
 </html>
-
-
