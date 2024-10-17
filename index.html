@@ -8,9 +8,8 @@
     <title>DAVID'S BARBERSHOP</title>
     <link rel="stylesheet" href="css/index.css">
     <meta name="description" content="En David's Barbershop ofrecemos cortes de cabello, afeitados y servicios personalizados para que luzcas siempre bien. ¡Reserva tu cita hoy!">
-
     <style>
-                .carrusel {
+        .carrusel {
             position: relative;
             max-width: 725px;
             margin: 0 auto;
@@ -82,10 +81,58 @@
         .next {
             right: 10px;
         }
+
+        /* Estilos para la galería de previsualización */
+        .preview-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .preview-container {
+            position: relative;
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        .preview-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .preview-close, .preview-prev, .preview-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .preview-close {
+            top: 20px;
+            right: 20px;
+            font-size: 3rem;
+        }
+
+        .preview-prev {
+            left: 20px;
+        }
+
+        .preview-next {
+            right: 20px;
+        }
     </style>
 </head>
 <body>
-    <!-- Carga de navegación -->
     <nav id="nav"></nav>
     <script>
         function loadNav() {
@@ -100,7 +147,6 @@
     </script>
 
     <div id="main-container">
-        <!-- Carga de encabezado -->
         <header id="header"></header>
         <script>
             function loadHeader() {
@@ -114,15 +160,12 @@
             loadHeader();
         </script>
 
-          <h2>Servicios</h2>
-          <p>Ofrecemos los mejores cortes de cabello, afeitados clásicos y modernos, y cuidado de la barba.</p>
-
-        <!-- Tarjetas -->
+        <!-- Carrusel -->
         <div class="carrusel">
             <div class="carrusel-container">
                 <div class="carrusel-item active">
                     <div class="tarjeta">
-                        <img src="assets/imagen1.jpg" alt="Imagen 1" class="tarjeta-img">
+                        <img src="/api/placeholder/400/600?text=Imagen 1" alt="Imagen 1" class="tarjeta-img">
                         <div class="tarjeta-cuerpo">
                             <h5 class="tarjeta-titulo">Título de la Tarjeta 1</h5>
                             <p class="tarjeta-texto">Este es un texto de ejemplo para la tarjeta 1. Proporciona información adicional sobre el contenido.</p>
@@ -132,20 +175,20 @@
                 </div>
                 <div class="carrusel-item">
                     <div class="tarjeta">
-                        <img src="assets/imagen2.jpg" alt="Imagen 2" class="tarjeta-img">
+                        <img src="/api/placeholder/400/600?text=Imagen 2" alt="Imagen 2" class="tarjeta-img">
                         <div class="tarjeta-cuerpo">
                             <h5 class="tarjeta-titulo">Título de la Tarjeta 2</h5>
-                            <p class="tarjeta-texto">Este es un texto de ejemplo para la tarjeta 2.</p>
+                            <p class="tarjeta-texto">Este es un texto de ejemplo para la tarjeta 2. Es un poco más largo para mostrar cómo se ajusta el contenido.</p>
                             <div class="tarjeta-footer">Last updated 10 mins ago</div>
                         </div>
                     </div>
                 </div>
                 <div class="carrusel-item">
                     <div class="tarjeta">
-                        <img src="assets/imagen3.jpg" alt="Imagen 3" class="tarjeta-img">
+                        <img src="/api/placeholder/400/600?text=Imagen 3" alt="Imagen 3" class="tarjeta-img">
                         <div class="tarjeta-cuerpo">
                             <h5 class="tarjeta-titulo">Título de la Tarjeta 3</h5>
-                            <p class="tarjeta-texto">Este es un texto de ejemplo para la tarjeta 3.</p>
+                            <p class="tarjeta-texto">Este es un texto de ejemplo para la tarjeta 3. Demuestra cómo se puede incluir más información en cada slide.</p>
                             <div class="tarjeta-footer">Last updated 15 mins ago</div>
                         </div>
                     </div>
@@ -155,9 +198,20 @@
             <button class="carrusel-control next" onclick="cambiarSlide(1)">&#10095;</button>
         </div>
 
-        <!-- Script del carrusel -->
+        <!-- Galería de previsualización -->
+        <div class="preview-overlay">
+            <div class="preview-container">
+                <img src="" alt="Preview" class="preview-image">
+                <span class="preview-close">&times;</span>
+                <span class="preview-nav preview-prev"><i class="fas fa-chevron-left"></i></span>
+                <span class="preview-nav preview-next"><i class="fas fa-chevron-right"></i></span>
+            </div>
+        </div>
+
         <script>
             let slideIndex = 0;
+            const carruselItems = document.querySelectorAll('.carrusel-item img');
+            let currentImageIndex = 0;
 
             function cambiarSlide(n) {
                 const items = document.querySelectorAll('.carrusel-item');
@@ -173,30 +227,39 @@
                 const offset = -slideIndex * 100;
                 document.querySelector('.carrusel-container').style.transform = `translateX(${offset}%)`;
             }
+
+            // Mostrar la imagen en grande
+            function showPreview(index) {
+                currentImageIndex = index;
+                const imgSrc = carruselItems[index].src;
+                document.querySelector('.preview-image').src = imgSrc;
+                document.querySelector('.preview-overlay').style.display = 'flex';
+            }
+
+            // Cerrar la galería
+            document.querySelector('.preview-close').addEventListener('click', function() {
+                document.querySelector('.preview-overlay').style.display = 'none';
+            });
+
+            // Navegar entre las imágenes
+            document.querySelector('.preview-prev').addEventListener('click', function() {
+                currentImageIndex = (currentImageIndex > 0) ? currentImageIndex - 1 : carruselItems.length - 1;
+                showPreview(currentImageIndex);
+            });
+
+            document.querySelector('.preview-next').addEventListener('click', function() {
+                currentImageIndex = (currentImageIndex < carruselItems.length - 1) ? currentImageIndex + 1 : 0;
+                showPreview(currentImageIndex);
+            });
+
+            // Añadir evento de clic a cada imagen del carrusel
+            carruselItems.forEach((img, index) => {
+                img.addEventListener('click', function() {
+                    showPreview(index);
+                });
+            });
         </script>
 
-        <!-- Contenido adicional -->
-        <div class="content">
-            <h2>Servicios</h2>
-            <p>Ofrecemos los mejores cortes de cabello, afeitados clásicos y modernos, y cuidado de la barba.</p>
-
-            <h2>Reseñas</h2>
-            <!-- Formulario de reseñas -->
-            <form id="reviewForm">
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" required>
-                <label for="rating">Rating:</label>
-                <input type="number" id="rating" max="5" min="1" required>
-                <label for="message">Reseña:</label>
-                <textarea id="message" required></textarea>
-                <button type="submit">Enviar reseña</button>
-            </form>
-
-            <!-- Div para mostrar las reseñas -->
-            <div id="reviews"></div>
-        </div>
-
-        <!-- Carga del footer -->
         <div id="footer"></div>
         <script>
             function loadFooter() {
@@ -204,86 +267,16 @@
                     .then(response => response.text())
                     .then(data => {
                         document.getElementById('footer').innerHTML = data;
-                        setCurrentYear();
                     })
                     .catch(error => console.error('Error cargando el footer:', error));
             }
-
-            function setCurrentYear() {
-                const yearSpan = document.getElementById('currentYear');
-                if (yearSpan) {
-                    yearSpan.textContent = new Date().getFullYear();
-                }
-            }
             loadFooter();
-        </script>
-
-        <!-- Ajuste de posición del footer -->
-        <script>
-            function adjustFooterPosition() {
-                const bodyHeight = document.body.offsetHeight;
-                const windowHeight = window.innerHeight;
-                const footer = document.getElementById('footer');
-                if (bodyHeight < windowHeight) {
-                    footer.style.position = 'absolute';
-                    footer.style.bottom = '0';
-                    footer.style.width = '100%';
-                } else {
-                    footer.style.position = 'static';
-                }
-            }
-        </script>
-
-        <!-- Configuración de Firebase -->
-        <script type="module">
-            import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
-            import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-database.js";
-
-            const firebaseConfig = {
-                apiKey: "AIzaSyAcEOXsxYfMlWfqlUfOKPVGQ6VD4CqpFnw",
-                authDomain: "prueba-1346b.firebaseapp.com",
-                projectId: "prueba-1346b",
-                storageBucket: "prueba-1346b.appspot.com",
-                messagingSenderId: "128834634368",
-                appId: "1:128834634368:web:81328d2670b2eabb9e9c65",
-                measurementId: "G-P1T4EJMV8C"
-            };
-
-            const app = initializeApp(firebaseConfig);
-            const database = getDatabase(app);
-
-            function writeReview(userId, name, rating, message) {
-                set(ref(database, 'reviews/' + userId), {
-                    username: name,
-                    rating: rating,
-                    review: message
-                });
-            }
-
-            const reviewsRef = ref(database, 'reviews/');
-            onValue(reviewsRef, (snapshot) => {
-                const data = snapshot.val();
-                const reviewsDiv = document.getElementById('reviews');
-                reviewsDiv.innerHTML = '';
-                for (const key in data) {
-                    const review = data[key];
-                    reviewsDiv.innerHTML += `<div><h4>${review.username} - ${review.rating} estrellas</h4><p>${review.review}</p></div>`;
-                }
-            });
-
-            document.getElementById('reviewForm').addEventListener('submit', function(e) {
-                e.preventDefault();
-                const name = document.getElementById('name').value;
-                const rating = document.getElementById('rating').value;
-                const message = document.getElementById('message').value;
-                
-                const userId = Date.now();
-                writeReview(userId, name, rating, message);
-                alert('Reseña enviada correctamente');
-            });
         </script>
     </div>
 
-    <script src="javascript/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="javascript/galeria.js"></script>
 </body>
 </html>
