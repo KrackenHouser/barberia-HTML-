@@ -8,7 +8,84 @@
     <title>DAVID'S BARBERSHOP</title>
     <link rel="stylesheet" href="css/index.css">
     <meta name="description" content="En David's Barbershop ofrecemos cortes de cabello, afeitados y servicios personalizados para que luzcas siempre bien. ¡Reserva tu cita hoy!">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
+    <!-- Corrección de la etiqueta de estilos -->
+    <style>
+        
+        .carrusel {
+            position: relative;
+            max-width: 725px;
+            margin: 0 auto;
+            overflow: hidden;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .carrusel-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carrusel-item {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .tarjeta {
+            display: flex;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .tarjeta-img {
+            width: 40%;
+            object-fit: cover;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+        }
+
+        .tarjeta-cuerpo {
+            padding: 20px;
+            width: 60%;
+        }
+
+        .tarjeta-titulo {
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+
+        .tarjeta-texto {
+            font-size: 1rem;
+            color: #6c757d;
+        }
+
+        .tarjeta-footer {
+            font-size: 0.875rem;
+            color: #6c757d;
+            margin-top: 10px;
+        }
+
+        .carrusel-control {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 50%;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+    </style>
 </head>
 <body>
     <!-- Carga de navegación -->
@@ -39,49 +116,65 @@
             }
             loadHeader();
         </script>
-        
-<!-- Carrusel Servicios -->
-<div id="carroucel"></div>
-<script>
-    function loadCarroucel() {
-        fetch('components/carroucel.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('carroucel').innerHTML = data;
 
-                // Aquí inicia el código para controlar el carrusel
-                let slideIndex = 0;  // Inicia en la primera tarjeta
+        <!-- Carrusel de tarjetas -->
+        <div class="carrusel">
+            <div class="carrusel-container">
+                <div class="carrusel-item active">
+                    <div class="tarjeta">
+                        <img src="assets/imagen1.jpg" alt="Imagen 1" class="tarjeta-img">
+                        <div class="tarjeta-cuerpo">
+                            <h5 class="tarjeta-titulo">Título de la Tarjeta 1</h5>
+                            <p class="tarjeta-texto">Este es un texto de ejemplo para la tarjeta 1. Proporciona información adicional sobre el contenido.</p>
+                            <div class="tarjeta-footer">Last updated 5 mins ago</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carrusel-item">
+                    <div class="tarjeta">
+                        <img src="assets/imagen2.jpg" alt="Imagen 2" class="tarjeta-img">
+                        <div class="tarjeta-cuerpo">
+                            <h5 class="tarjeta-titulo">Título de la Tarjeta 2</h5>
+                            <p class="tarjeta-texto">Este es un texto de ejemplo para la tarjeta 2.</p>
+                            <div class="tarjeta-footer">Last updated 10 mins ago</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carrusel-item">
+                    <div class="tarjeta">
+                        <img src="assets/imagen3.jpg" alt="Imagen 3" class="tarjeta-img">
+                        <div class="tarjeta-cuerpo">
+                            <h5 class="tarjeta-titulo">Título de la Tarjeta 3</h5>
+                            <p class="tarjeta-texto">Este es un texto de ejemplo para la tarjeta 3.</p>
+                            <div class="tarjeta-footer">Last updated 15 mins ago</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carrusel-control prev" onclick="cambiarSlide(-1)">&#10094;</button>
+            <button class="carrusel-control next" onclick="cambiarSlide(1)">&#10095;</button>
+        </div>
 
-                // Función para cambiar de tarjeta
-                function cambiarSlide(n) {
-                    const items = document.querySelectorAll('.carrusel-item');  // Selecciona todas las tarjetas
-                    slideIndex += n;  // Cambia el índice según el botón clickeado
+        <!-- Script del carrusel -->
+        <script>
+            let slideIndex = 0;
 
-                    // Si el índice supera la cantidad de tarjetas, vuelve al inicio
-                    if (slideIndex >= items.length) {
-                        slideIndex = 0;
-                    }
+            function cambiarSlide(n) {
+                const items = document.querySelectorAll('.carrusel-item');
+                slideIndex += n;
 
-                    // Si el índice es menor a 0, ve al último elemento
-                    if (slideIndex < 0) {
-                        slideIndex = items.length - 1;
-                    }
-
-                    // Ocultar todas las tarjetas
-                    items.forEach(item => {
-                        item.classList.remove('active');  // Elimina la clase 'active' de todas las tarjetas
-                    });
-
-                    // Mostrar la tarjeta correspondiente
-                    items[slideIndex].classList.add('active');  // Añade la clase 'active' a la tarjeta visible
+                if (slideIndex >= items.length) {
+                    slideIndex = 0;
+                }
+                if (slideIndex < 0) {
+                    slideIndex = items.length - 1;
                 }
 
-                // Aquí puedes agregar controladores de eventos para los botones de navegación, si no los tienes en el HTML cargado
-            })
-            .catch(error => console.error('Error cargando el carroucel:', error));
-    }
-    loadCarroucel();
-</script>
+                const offset = -slideIndex * 100;
+                document.querySelector('.carrusel-container').style.transform = `translateX(${offset}%)`;
+            }
+        </script>
+
         <!-- Contenido adicional -->
         <div class="content">
             <h2>Servicios</h2>
