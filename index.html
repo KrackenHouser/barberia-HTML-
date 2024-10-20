@@ -42,48 +42,46 @@
         
 <!-- Carrusel Servicios -->
 <div id="carroucel"></div>
-
 <script>
     function loadCarroucel() {
         fetch('components/carroucel.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('carroucel').innerHTML = data;
+
+                // Aquí inicia el código para controlar el carrusel
+                let slideIndex = 0;  // Inicia en la primera tarjeta
+
+                // Función para cambiar de tarjeta
+                function cambiarSlide(n) {
+                    const items = document.querySelectorAll('.carrusel-item');  // Selecciona todas las tarjetas
+                    slideIndex += n;  // Cambia el índice según el botón clickeado
+
+                    // Si el índice supera la cantidad de tarjetas, vuelve al inicio
+                    if (slideIndex >= items.length) {
+                        slideIndex = 0;
+                    }
+
+                    // Si el índice es menor a 0, ve al último elemento
+                    if (slideIndex < 0) {
+                        slideIndex = items.length - 1;
+                    }
+
+                    // Ocultar todas las tarjetas
+                    items.forEach(item => {
+                        item.classList.remove('active');  // Elimina la clase 'active' de todas las tarjetas
+                    });
+
+                    // Mostrar la tarjeta correspondiente
+                    items[slideIndex].classList.add('active');  // Añade la clase 'active' a la tarjeta visible
+                }
+
+                // Aquí puedes agregar controladores de eventos para los botones de navegación, si no los tienes en el HTML cargado
             })
             .catch(error => console.error('Error cargando el carroucel:', error));
     }
     loadCarroucel();
 </script>
-<!-- JavaScript para el carrusel -->
-<script>
-    let slideIndex = 0;  // Inicia en la primera tarjeta
-
-    // Función para cambiar de tarjeta
-    function cambiarSlide(n) {
-        const items = document.querySelectorAll('.carrusel-item');  // Selecciona todas las tarjetas
-        slideIndex += n;  // Cambia el índice según el botón clickeado
-
-        // Si el índice supera la cantidad de tarjetas, vuelve al inicio
-        if (slideIndex >= items.length) {
-            slideIndex = 0;
-        }
-
-        // Si el índice es menor a 0, ve al último elemento
-        if (slideIndex < 0) {
-            slideIndex = items.length - 1;
-        }
-
-        // Ocultar todas las tarjetas
-        items.forEach(item => {
-            item.classList.remove('active');  // Elimina la clase 'active' de todas las tarjetas
-        });
-
-        // Mostrar la tarjeta correspondiente
-        items[slideIndex].classList.add('active');  // Añade la clase 'active' a la tarjeta visible
-    }
-</script>
-        
-        
         <!-- Contenido adicional -->
         <div class="content">
             <h2>Servicios</h2>
