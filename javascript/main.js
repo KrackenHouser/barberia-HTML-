@@ -48,5 +48,6 @@ function setupMobileNav() {
 document.addEventListener('DOMContentLoaded', function(){
     loadComponent('nav', 'components/nav.html');
     loadComponent('header', 'components/header.html');
+    loadComponent('carroucel', 'components/carroucel.html');
     loadComponent('footer', 'components/footer.html');
 });
