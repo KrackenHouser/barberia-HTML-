@@ -3,11 +3,12 @@
 @import url('header.css');
 @import url('content.css');
 @import url('footer.css');
+@import url('carroucel.css');
 
 /* Estilos generales del INDEX*/
 body {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 html, body {
     height: 100%;
@@ -28,8 +29,6 @@ footer{
         .content {
             flex: 1;
         }
-
-
 
 
 /* Agregar de espacio a los lados */
