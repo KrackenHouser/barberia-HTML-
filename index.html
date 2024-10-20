@@ -8,11 +8,10 @@
     <title>DAVID'S BARBERSHOP</title>
     <link rel="stylesheet" href="css/index.css">
     <meta name="description" content="En David's Barbershop ofrecemos cortes de cabello, afeitados y servicios personalizados para que luzcas siempre bien. ¡Reserva tu cita hoy!">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Corrección de la etiqueta de estilos -->
     <style>
-        
+
         .carrusel {
             position: relative;
             max-width: 725px;
@@ -116,65 +115,22 @@
             }
             loadHeader();
         </script>
+        
+<!-- Carrusel Servicios -->
+<div id="carroucel"></div>
 
-        <!-- Carrusel de tarjetas -->
-        <div class="carrusel">
-            <div class="carrusel-container">
-                <div class="carrusel-item active">
-                    <div class="tarjeta">
-                        <img src="assets/imagen1.jpg" alt="Imagen 1" class="tarjeta-img">
-                        <div class="tarjeta-cuerpo">
-                            <h5 class="tarjeta-titulo">Título de la Tarjeta 1</h5>
-                            <p class="tarjeta-texto">Este es un texto de ejemplo para la tarjeta 1. Proporciona información adicional sobre el contenido.</p>
-                            <div class="tarjeta-footer">Last updated 5 mins ago</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carrusel-item">
-                    <div class="tarjeta">
-                        <img src="assets/imagen2.jpg" alt="Imagen 2" class="tarjeta-img">
-                        <div class="tarjeta-cuerpo">
-                            <h5 class="tarjeta-titulo">Título de la Tarjeta 2</h5>
-                            <p class="tarjeta-texto">Este es un texto de ejemplo para la tarjeta 2.</p>
-                            <div class="tarjeta-footer">Last updated 10 mins ago</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carrusel-item">
-                    <div class="tarjeta">
-                        <img src="assets/imagen3.jpg" alt="Imagen 3" class="tarjeta-img">
-                        <div class="tarjeta-cuerpo">
-                            <h5 class="tarjeta-titulo">Título de la Tarjeta 3</h5>
-                            <p class="tarjeta-texto">Este es un texto de ejemplo para la tarjeta 3.</p>
-                            <div class="tarjeta-footer">Last updated 15 mins ago</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button class="carrusel-control prev" onclick="cambiarSlide(-1)">&#10094;</button>
-            <button class="carrusel-control next" onclick="cambiarSlide(1)">&#10095;</button>
-        </div>
-
-        <!-- Script del carrusel -->
-        <script>
-            let slideIndex = 0;
-
-            function cambiarSlide(n) {
-                const items = document.querySelectorAll('.carrusel-item');
-                slideIndex += n;
-
-                if (slideIndex >= items.length) {
-                    slideIndex = 0;
-                }
-                if (slideIndex < 0) {
-                    slideIndex = items.length - 1;
-                }
-
-                const offset = -slideIndex * 100;
-                document.querySelector('.carrusel-container').style.transform = `translateX(${offset}%)`;
-            }
-        </script>
-
+<script>
+    function loadCarroucel() {
+        fetch('components/carroucel.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('carroucel').innerHTML = data;
+            })
+            .catch(error => console.error('Error cargando el carroucel:', error));
+    }
+    loadCarroucel();
+</script>
+        
         <!-- Contenido adicional -->
         <div class="content">
             <h2>Servicios</h2>
