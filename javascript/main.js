@@ -51,20 +51,3 @@ document.addEventListener('DOMContentLoaded', function(){
     loadComponent('carroucel', 'components/carroucel.html');
     loadComponent('footer', 'components/footer.html');
 });
-
-//Footer Run
-window.addEventListener('resize', adjustFooterPosition);
-document.addEventListener('DOMContentLoaded', adjustFooterPosition);
-
-function adjustFooterPosition() {
-    const footer = document.querySelector('footer');
-    const content = document.querySelector('.content');
-    
-    // Lógica adicional si es necesario
-    if (window.innerHeight > content.offsetHeight + footer.offsetHeight) {
-        footer.style.position = 'absolute';
-        footer.style.bottom = '0';
-    } else {
-        footer.style.position = 'relative';
-    }
-}
