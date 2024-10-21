@@ -162,9 +162,12 @@
 }
 
 @media (max-width: 1200px) {
-    #main-container {
-        width: 95%;
+    #main-container,
+    .container {
+        max-width: 95%;
+        padding: 0 1px;
     }
 }
+
 
 
