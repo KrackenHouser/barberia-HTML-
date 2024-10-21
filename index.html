@@ -123,64 +123,82 @@
             }
             loadHeader();
         </script>
-
-        <!-- Carrusel de tarjetas -->
-        <div class="carrusel">
-            <div class="carrusel-container">
-                <div class="carrusel-item active">
-                    <div class="tarjeta">
-                        <img src="assets/imagen1.jpg" alt="Imagen 1" class="tarjeta-img">
-                        <div class="tarjeta-cuerpo">
-                            <h5 class="tarjeta-titulo">Título de la Tarjeta 1</h5>
-                            <p class="tarjeta-texto">Este es un texto de ejemplo para la tarjeta 1. Proporciona información adicional sobre el contenido.</p>
-                            <div class="tarjeta-footer">Last updated 5 mins ago</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carrusel-item">
-                    <div class="tarjeta">
-                        <img src="assets/imagen2.jpg" alt="Imagen 2" class="tarjeta-img">
-                        <div class="tarjeta-cuerpo">
-                            <h5 class="tarjeta-titulo">Título de la Tarjeta 2</h5>
-                            <p class="tarjeta-texto">Este es un texto de ejemplo para la tarjeta 2.</p>
-                            <div class="tarjeta-footer">Last updated 10 mins ago</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carrusel-item">
-                    <div class="tarjeta">
-                        <img src="assets/imagen3.jpg" alt="Imagen 3" class="tarjeta-img">
-                        <div class="tarjeta-cuerpo">
-                            <h5 class="tarjeta-titulo">Título de la Tarjeta 3</h5>
-                            <p class="tarjeta-texto">Este es un texto de ejemplo para la tarjeta 3.</p>
-                            <div class="tarjeta-footer">Last updated 15 mins ago</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button class="carrusel-control prev" onclick="cambiarSlide(-1)">&#10094;</button>
-            <button class="carrusel-control next" onclick="cambiarSlide(1)">&#10095;</button>
+    <!-- Carrusel de tarjetas -->
+    <div class="carrusel">
+        <div id="carrusel-container" class="carrusel-container">
+            <!-- Las tarjetas se generarán dinámicamente aquí -->
         </div>
+        <button class="carrusel-control prev" onclick="cambiarSlide(-1)">&#10094;</button>
+        <button class="carrusel-control next" onclick="cambiarSlide(1)">&#10095;</button>
+    </div>
 
-        <!-- Script del carrusel -->
-        <script>
-            let slideIndex = 0;
-
-            function cambiarSlide(n) {
-                const items = document.querySelectorAll('.carrusel-item');
-                slideIndex += n;
-
-                if (slideIndex >= items.length) {
-                    slideIndex = 0;
-                }
-                if (slideIndex < 0) {
-                    slideIndex = items.length - 1;
-                }
-
-                const offset = -slideIndex * 100;
-                document.querySelector('.carrusel-container').style.transform = `translateX(${offset}%)`;
+    <script>
+        // Array con la información de las tarjetas
+        const tarjetas = [
+            {
+                imagen: "assets/imagen1.jpg",
+                titulo: "Título de la Tarjeta 1",
+                texto: "Este es un texto de ejemplo para la tarjeta 1. Proporciona información adicional sobre el contenido.",
+                actualizado: "Last updated 5 mins ago"
+            },
+            {
+                imagen: "assets/imagen2.jpg",
+                titulo: "Título de la Tarjeta 2",
+                texto: "Este es un texto de ejemplo para la tarjeta 2.",
+                actualizado: "Last updated 10 mins ago"
+            },
+            {
+                imagen: "assets/imagen3.jpg",
+                titulo: "Título de la Tarjeta 3",
+                texto: "Este es un texto de ejemplo para la tarjeta 3.",
+                actualizado: "Last updated 15 mins ago"
             }
-        </script>
+            // Puedes añadir más tarjetas aquí
+        ];
+
+        // Función para barajar el array
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        // Barajamos el array de tarjetas
+        shuffleArray(tarjetas);
+
+        // Generamos el HTML para las tarjetas
+        const carruselContainer = document.getElementById('carrusel-container');
+        tarjetas.forEach((tarjeta, index) => {
+            const tarjetaHTML = `
+                <div class="carrusel-item ${index === 0 ? 'active' : ''}">
+                    <div class="tarjeta">
+                        <img src="${tarjeta.imagen}" alt="${tarjeta.titulo}" class="tarjeta-img">
+                        <div class="tarjeta-cuerpo">
+                            <h5 class="tarjeta-titulo">${tarjeta.titulo}</h5>
+                            <p class="tarjeta-texto">${tarjeta.texto}</p>
+                            <div class="tarjeta-footer">${tarjeta.actualizado}</div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            carruselContainer.innerHTML += tarjetaHTML;
+        });
+
+        let slideIndex = 0;
+        function cambiarSlide(n) {
+            const items = document.querySelectorAll('.carrusel-item');
+            slideIndex += n;
+            if (slideIndex >= items.length) {
+                slideIndex = 0;
+            }
+            if (slideIndex < 0) {
+                slideIndex = items.length - 1;
+            }
+            const offset = -slideIndex * 100;
+            document.querySelector('.carrusel-container').style.transform = `translateX(${offset}%)`;
+        }
+    </script>
 
         <!-- Contenido adicional -->
         <div class="content">
@@ -225,21 +243,6 @@
             loadFooter();
         </script>
 
-        <!-- Ajuste de posición del footer -->
-        <script>
-            function adjustFooterPosition() {
-                const bodyHeight = document.body.offsetHeight;
-                const windowHeight = window.innerHeight;
-                const footer = document.getElementById('footer');
-                if (bodyHeight < windowHeight) {
-                    footer.style.position = 'absolute';
-                    footer.style.bottom = '0';
-                    footer.style.width = '100%';
-                } else {
-                    footer.style.position = 'static';
-                }
-            }
-        </script>
 
         <!-- Configuración de Firebase -->
         <script type="module">
