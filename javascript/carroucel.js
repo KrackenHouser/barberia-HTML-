@@ -1,17 +1,28 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const carruselContainer = document.getElementById('carrusel-container');
 
-            let slideIndex = 0;
+    // Hacer una solicitud para cargar el archivo JSON
+    fetch('data/carrusel.json')
+        .then(response => response.json())
+        .then(data => {
+            const slides = data.slides;
 
-            function cambiarSlide(n) {
-                const items = document.querySelectorAll('.carrusel-item');
-                slideIndex += n;
-
-                if (slideIndex >= items.length) {
-                    slideIndex = 0;
-                }
-                if (slideIndex < 0) {
-                    slideIndex = items.length - 1;
-                }
-
-                const offset = -slideIndex * 100;
-                document.querySelector('.carrusel-container').style.transform = `translateX(${offset}%)`;
-            }
+            // Iterar sobre los slides y generar el HTML
+            slides.forEach((slide, index) => {
+                const slideHTML = `
+                    <div class="carrusel-item ${index === 0 ? 'active' : ''}">
+                        <div class="tarjeta">
+                            <img src="${slide.imagen}" alt="${slide.titulo}" class="tarjeta-img">
+                            <div class="tarjeta-cuerpo">
+                                <h5 class="tarjeta-titulo">${slide.titulo}</h5>
+                                <p class="tarjeta-texto">${slide.texto}</p>
+                                <div class="tarjeta-footer">${slide.actualizado}</div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                carruselContainer.innerHTML += slideHTML;
+            });
+        })
+        .catch(error => console.error('Error al cargar el archivo JSON:', error));
+});
